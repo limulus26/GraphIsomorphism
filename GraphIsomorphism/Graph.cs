@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace GraphIsomorphism
 {
-    class Graph
+    public class Graph
     {
         int[] vertices;
         Dictionary<int, int[]> edges;
+        List<List<int>> partitions;
 
         public Graph() {}
 
@@ -21,5 +22,6 @@ namespace GraphIsomorphism
 
         public int[] Vertices { get => vertices; set => vertices = value; }
         public Dictionary<int, int[]> Edges { get => edges; set => edges = value; }
+        public List<List<int>> Partitions { get => partitions; set => partitions = value; }
     }
 }

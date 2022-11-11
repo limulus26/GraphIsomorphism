@@ -27,11 +27,11 @@ namespace GraphIsomorphism
             int[] bVertices = new int[] { 1, 2, 3, 4, 5 };
             Dictionary<int, int[]> bEdges = new Dictionary<int, int[]>
             {
-                { 1, new int[] { 2, 3, 4 } },
+                { 1, new int[] { 2, 3, 4, 5 } },
                 { 2, new int[] { 1, 3, 4, 5 } },
                 { 3, new int[] { 1, 2, 4, 5 } },
-                { 4, new int[] { 1, 2, 3, 5 } },
-                { 5, new int[] { 2, 3, 4 } }
+                { 4, new int[] { 1, 2, 3 } },
+                { 5, new int[] { 1, 2, 3 } }
             };
 
             Graph bGraph = new Graph(bVertices, bEdges);
@@ -39,7 +39,7 @@ namespace GraphIsomorphism
             Isomorphism graphPair = new Isomorphism(aGraph, bGraph);
 
             // Print true if the graphs are isomorphic
-            Console.Write(graphPair.Check());
+            Console.Write(graphPair.WLTest());
             Console.ReadKey();
         }
     }
